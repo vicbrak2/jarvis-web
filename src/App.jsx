@@ -2,6 +2,7 @@ import TaskBoard from './components/TaskBoard';
 import EisenhowerMatrix from './components/EisenhowerMatrix';
 import ChatPanel from './components/ChatPanel';
 import Calendar from './components/Calendar';
+import AuditLog from './components/AuditLog';
 import './index.css';
 
 function App() {
@@ -28,9 +29,10 @@ function App() {
           </div>
         </div>
 
-        {/* Chat Panel: Full Width */}
-        <div className="mt-6">
+        {/* Chat Panel + Audit Log: Full Width */}
+        <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
           <ChatPanel />
+          <AuditLog />
         </div>
 
         {/* Footer */}
