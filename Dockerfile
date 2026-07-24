@@ -16,5 +16,4 @@ RUN npm run build
 
 # Start
 ENV NODE_ENV=production
-ENV PORT=3000
-CMD ["npm", "run", "preview", "--", "--port", "3000"]
+CMD ["npm", "run", "preview", "--", "--port", "5173", "--host", "0.0.0.0"]
