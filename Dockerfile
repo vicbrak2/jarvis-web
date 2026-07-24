@@ -18,6 +18,6 @@ COPY . .
 # Build
 RUN npm run build
 
-# Start
+# Start - use PORT env var from Railway, default to 5173
 ENV NODE_ENV=production
-CMD ["npm", "run", "preview", "--", "--port", "5173", "--host", "0.0.0.0"]
+CMD sh -c "npm run preview -- --port ${PORT:-5173} --host 0.0.0.0"
