@@ -2,6 +2,10 @@ FROM node:20-alpine
 
 WORKDIR /app
 
+# Invalidate cache - force fresh rebuild
+ARG BUILD_DATE
+ENV BUILD_DATE=$BUILD_DATE
+
 # Copy package files
 COPY package*.json ./
 
